@@ -10,20 +10,71 @@
 
     <title>Google Advanced Search</title>
   </head>
-  <body>
-    <h1>Google Advanced Search</h1>
-    
+  <body>  
     <ul class="nav justify-content-end">
         <span class="border border-primary">
             <li class="nav-item">
               <a class="nav-link active" href="index.html">go back to Google Search</a></span>
             </li>
     </ul>
+    <h1>Google Advanced Search</h1>
+    <p></p>
 
-    <form action="https://google.com/search">
+    <!-- <form action="https://google.com/search">
       <input type="text" name="q">
       <input type="submit" value="Google Search">
-  </form>
+    </form>-->
+
+    <!--<div class="container">
+      <div class="row row-cols-4">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="col-6">Column</div>
+        <div class="col">Column</div>
+      </div>
+    </div>-->
+
+    <form px-lg-5 action="https://www.google.com.ar/search?">
+      <div class="form-group row justify-content-center">
+        <label for="inputEmail3" class="col-sm-3 col-form-label px-lg-5">all these words:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputEmail3" name="as_q">
+        </div>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label for="inputEmail3" class="col-sm-3 col-form-label px-lg-5">this exact word or phrase:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputEmail3" name="as_epq">
+        </div>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label for="inputEmail3" class="col-sm-3 col-form-label px-lg-5">any of these words:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputEmail3" name="as_oq">
+        </div>
+      </div>
+
+      <div class="form-group row justify-content-center">
+        <label for="inputEmail3" class="col-sm-3 col-form-label px-lg-5">none of these words:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control" id="inputEmail3" name="as_eq">
+        </div>
+      </div>
+      
+      <!--<div class="container">-->
+      <div class="row justify-content-center">
+        <div class="col-sm-3 col-form-label px-lg-5">
+        <!--div class="col">-->
+          <input type="hidden" id="custId" name="hl" value="en">    
+          <button type="submit" class="btn btn-primary" value="Google Search">Advanced Search</button>
+        </div>
+      </div>
+      
+      
+      
+    </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
