@@ -11,57 +11,44 @@
     <title>Google Search</title>
   </head>
   <body>
-    <h1>Google Search</h1>
-    <!--
-    <a href="image.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Google Image Search</a>
-    <a href="advance.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Google Advanced Search</a>
-    <p></p>-->
-    
-        <ul class="nav justify-content-end">
-        <span class="border border-primary">
-            <li class="nav-item">
-              <a class="nav-link active" href="image.html">Google Image Search</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="advance.html">Google Advanced Search</a></span>
-            </li>
-        </ul>
-        <p></p>
-    <!--<form action="https://google.com/search">
-      <input type="text" name="q">
-      <input type="submit" value="Google Search">
-    </form>-->
+    <ul class="nav justify-content-end">
+      <span class="border border-primary">
+        <li class="nav-item">
+          <a class="nav-link active" href="image.html">Google Image Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="advance.html">Google Advanced Search</a></span>
+        </li>
+    </ul>
+    <br>
 
-  <form action="https://google.com/search">
+    <div class="col-sm-12 text-center">
+      <img src="googlelogo.png" alt="Example image" class="img-responsive" width="272" height="92" />
+    </div>
 
-    <div class="container">
-        <div class="row">
-          <div class="col"></div>
+    <div class="col-sm-12 text-center">
+      <h7><small>a front-end for Google Search, Google Image Search, and Google Advanced Search</small></h7><br>
+      <h7><small>by Hector Schauvinhold for <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="navbar-link">CS50</a></strong></small></h7>
+    </div><br>
+
+    <form action="https://google.com/search">
+      <div class="container">
+        <div class="row justify-content-center">
           <div class="col-8">
-  
-            <div class="form-row">
-                <input type="text" name="q" class="form-control" placeholder="Search">
-            </div>
-
-          </div>
-          <div class="col"></div>
-    </div>
-        <p></p>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-2">
-    
               <div class="form-row">
-                <!--<input type="submit" class="form-control" value="Google Search">-->                
-                <button type="submit" class="btn btn-primary" value="Google Search">Google Search</button>
+                <input type="text" name="q" class="form-control" placeholder="Search">
               </div>
-  
-            </div>
-            <div class="col"></div>
-        </div>        
-    </div>
+          </div>
+        </div>
+        <br>
 
-  </form>
+        <div class="col-sm-12 text-center">
+          <button type="submit" class="btn btn-primary" value="Google Search">Google Search</button>
+          <button type="submit" class="btn btn-primary" value="I'm Feeling Lucky" name="btnI">I'm Feeling Lucky</button>
+        </div>
+
+      </div>
+    </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
