@@ -10,8 +10,7 @@
 
     <title>Google Image Search</title>
   </head>
-  <body>
-    <h1>Google Image Search</h1>
+  <body>    
 
     <ul class="nav justify-content-end">
         <span class="border border-primary">
@@ -20,7 +19,15 @@
             </li>
     </ul>
 
+    <div class="col-sm-12 text-center">
+      <img src="googlelogo.png" alt="Example image" class="img-responsive" width="272" height="92" />
+    </div>
 
+    <div class="col-sm-12 text-center">
+      <p class="text-primary">Google Image Search</p>
+      <!--<h7><small>Google Image Search</small></h7><br> -->
+      <h7><small>by Hector Schauvinhold from Santiago del Estero, Argentina for<br><strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="navbar-link">CS50’s Web Programming with Python and JavaScript</a></strong></small></h7>
+    </div><br>
 
     <form action="https://google.com/search">
 
@@ -43,7 +50,8 @@
         
                   <div class="form-row">
                     <!--<input type="submit" class="form-control" value="Google Search">-->    
-                    <input type="hidden" id="custId" name="tbm" value="isch">            
+                    <input type="hidden" id="custId" name="tbm" value="isch">      
+                    <input type="hidden" id="cusId2" name="hl" value="en">          
                     <button type="submit" class="btn btn-primary" value="Google Search">Google Image Search</button>
                   </div>
       
