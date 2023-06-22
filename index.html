@@ -18,20 +18,22 @@
     <script>
 
       function showPage(page){
-          // Seleccionar todos los div y en cada uno hacer que no se muestre  -->
-          document.querySelectorAll('div').forEach(div=>{
-              div.style.display='none';
-          })
-          // Mostrar unicamente el id que sea el valor de page("page1" o "page2" o "page3")...
-          document.querySelector(`#${page}`).style.display='block';
+        console.log('Page:',page)
+        // Seleccionar todos los div y en cada uno hacer que no se muestre  -->
+        document.querySelectorAll('div').forEach(div=>{
+            div.style.display='none';
+        })
+        // Mostrar unicamente el id que sea el valor de page("page1" o "page2" o "page3")...
+        document.querySelector(`#${page}`).style.display='block';
       }
 
       //Esperar hasta que todo el contenido de la pagina este cargado y agregamos un EventListener
       document.addEventListener('DOMContentLoaded', function(){
           //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
-          document.querySelectorAll('link').forEach(link =>{
+          document.querySelectorAll('link').forEach(link =>{              
               //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
               //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
+              console.log('Link:',link)
               link.onclick=function(){
                   showPage(this.dataset.page);
               }    
@@ -90,7 +92,7 @@
     <div class="container border">
 
       <div class="row border">
-        <div class="col-sm-2 border">
+        <div class="col-sm-2 border link">
           <strong><a href="#" class="link" data-page="page1">Wiki</a></strong>
         </div>
 
