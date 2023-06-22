@@ -9,6 +9,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Porfolio</title>
+
+    <script>
+
+      function showPage(page){
+          // Seleccionar todos los div y en cada uno hacer que no se muestre  -->
+          document.querySelectorAll('div').forEach(div=>{
+              div.style.display='none';
+          })
+          // Mostrar unicamente el id que sea el valor de page("page1" o "page2" o "page3")...
+          document.querySelector(`#${page}`).style.display='block';
+      }
+
+      //Esperar hasta que todo el contenido de la pagina este cargado y agregamos un EventListener
+      document.addEventListener('DOMContentLoaded', function(){
+          //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
+          document.querySelectorAll('link').forEach(link =>{
+              //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
+              //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
+              link.onclick=function(){
+                  showPage(this.dataset.page);
+              }    
+          })
+      })
+
+    </script>
+
   </head>
   <body>
     <!-- <ul class="nav justify-content-end">
@@ -23,13 +49,13 @@
     <br> -->
     <div><p><strong><center><h1>Welcome!</h1></center></strong></p></div>
     <div class="container">
-      <div class="row">
+      <div class="row align-middle">
         
         <div class="col-sm-4 text-end">
           <img src="FotoRedes.png" alt="My image" class="rounded" width="110"/>
         </div>
         
-        <div class="col-sm-6 text-center">
+        <div class="col-sm-6 text-center align-middle">
           <p><h5>This is my professional portfolio</h5>
           <!-- <strong><h4>Hector Schauvinhold</h4></strong> -->
           </p>
@@ -60,7 +86,7 @@
 
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="navbar-link">Wiki</a></strong>
+          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="link" data-page="page1">Wiki</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -70,7 +96,7 @@
 
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="navbar-link">Commerce</a></strong>
+          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="link" data-page="page2">Commerce</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -80,7 +106,7 @@
 
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="navbar-link">Mail</a></strong>
+          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="link" data-page="page3">Mail</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -90,7 +116,7 @@
   
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="navbar-link">Network</a></strong>
+          <strong><a href="https://cs50.harvard.edu/web/2020/projects/0/search/" class="link" data-page="page4">Network</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -98,6 +124,20 @@
         </div>        
       </div>
 
+    </div>
+
+    <div id="page1">
+      <h1>This is the page 1</h1>
+      <h3>Page one is awesome, agreed. But page 2.... oh my...</h3>
+    </div>
+    <div id="page2">
+        <h1>This is the page 2</h1>
+    </div>
+    <div id="page3">
+        <h1>This is the page 3</h1>
+    </div>
+    <div id="page4">
+      <h1>This is the page 3</h1>
     </div>
     
 
