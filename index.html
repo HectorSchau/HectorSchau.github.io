@@ -30,11 +30,12 @@
       //Esperar hasta que todo el contenido de la pagina este cargado y agregamos un EventListener
       document.addEventListener('DOMContentLoaded', function(){
           //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
-          document.querySelectorAll('div.highlighted').forEach(highlighted =>{              
+          const highlightedItems = document.querySelectorAll('div.highlighted')
+          highlightedItems.forEach(highlighted =>{              
               //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
               //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
               console.log('div.highlighted:',highlighted)
-              link.onclick=function(){
+              highlightedItems.onclick=function(){
                   showPage(this.dataset.page);
               }    
           })
