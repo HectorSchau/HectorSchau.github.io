@@ -20,7 +20,7 @@
       function showPage(page){
         console.log('Page:',page)
         // Seleccionar todos los div y en cada uno hacer que no se muestre  -->
-        document.querySelectorAll('div').forEach(div=>{
+        document.querySelectorAll('div.highlighted').forEach(highlighted=>{
             div.style.display='none';
         })
         // Mostrar unicamente el id que sea el valor de page("page1" o "page2" o "page3")...
@@ -30,10 +30,10 @@
       //Esperar hasta que todo el contenido de la pagina este cargado y agregamos un EventListener
       document.addEventListener('DOMContentLoaded', function(){
           //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
-          document.querySelectorAll('link').forEach(link =>{              
+          document.querySelectorAll('div.highlighted').forEach(highlighted =>{              
               //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
               //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
-              console.log('Link:',link)
+              console.log('div.highlighted:',highlighted)
               link.onclick=function(){
                   showPage(this.dataset.page);
               }    
@@ -92,8 +92,8 @@
     <div class="container border">
 
       <div class="row border">
-        <div class="col-sm-2 border link1">
-          <strong><a href="#" class="link1" data-page="page1">Wiki</a></strong>
+        <div class="col-sm-2 border">
+          <strong><a href="#" class="highlighted" data-page="page1">Wiki</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -103,7 +103,7 @@
 
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="#" class="link1" data-page="page2">Commerce</a></strong>
+          <strong><a href="#" class="highlighted" data-page="page2">Commerce</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -113,7 +113,7 @@
 
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="#" class="link1" data-page="page3">Mail</a></strong>
+          <strong><a href="#" class="highlighted" data-page="page3">Mail</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
@@ -123,7 +123,7 @@
   
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="#" class="link1" data-page="page4">Network</a></strong>
+          <strong><a href="#" class="highlighted" data-page="page4">Network</a></strong>
         </div>
 
         <div class="col-sm-10 text-start border">
