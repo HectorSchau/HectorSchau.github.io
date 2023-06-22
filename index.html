@@ -20,7 +20,7 @@
       function showPage(page){
         console.log('Page:',page)
         // Seleccionar todos los div y en cada uno hacer que no se muestre  -->
-        document.querySelectorAll('div#page1','div#page2','div#page3','div#page4').forEach(highlighted=>{
+        document.querySelectorAll('#page1,#page2,#page3,#page4').forEach(div=>{
             div.style.display='none';
         })
         // Mostrar unicamente el id que sea el valor de page("page1" o "page2" o "page3")...
@@ -66,7 +66,7 @@
         </div>
         
         <div class="col-sm-6 text-center align-middle">
-          <p><h5>This is my professional portfolio T06</h5>
+          <p><h5>This is my professional portfolio T07</h5>
           <!-- <strong><h4>Hector Schauvinhold</h4></strong> -->
           </p>
         </div>        
