@@ -30,14 +30,14 @@
       //Esperar hasta que todo el contenido de la pagina este cargado y agregamos un EventListener
       document.addEventListener('DOMContentLoaded', function(){
           //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
-          const highlightedItems = document.querySelectorAll('div.highlighted');
+          const highlightedItems = document.querySelectorAll('button');
           console.log('div.highlighted SELECTED:', highlightedItems);
           console.log('type div.highlighted:', typeof highlightedItems);
-          highlightedItems.forEach(item =>{              
+          highlightedItems.forEach(button =>{              
               //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
               //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
-              console.log('div.highlighted:',item)
-              item.onclick=function(){
+              console.log('div.highlighted:',button)
+              button.onclick=function(){
                   showPage(this.dataset.page);
               }    
           })
@@ -66,7 +66,7 @@
         </div>
         
         <div class="col-sm-6 text-center align-middle">
-          <p><h5>This is my professional portfolio T03</h5>
+          <p><h5>This is my professional portfolio T04</h5>
           <!-- <strong><h4>Hector Schauvinhold</h4></strong> -->
           </p>
         </div>        
@@ -96,7 +96,8 @@
 
       <div class="row border">
         <div class="col-sm-2 border">
-          <strong><a href="#" class="highlighted" data-page="page1">Wiki</a></strong>
+          <!-- <strong><a href="#" class="highlighted" data-page="page1">Wiki</a></strong> -->
+          <button data-page="page1">Wiki</button>
         </div>
 
         <div class="col-sm-10 text-start border">
