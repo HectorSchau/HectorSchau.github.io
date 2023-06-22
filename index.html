@@ -31,6 +31,8 @@
       document.addEventListener('DOMContentLoaded', function(){
           //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
           const highlightedItems = document.querySelectorAll('div.highlighted');
+          console.log('div.highlighted SELECTED:', highlightedItems);
+          console.log('type div.highlighted:', typeof highlightedItems);
           highlightedItems.forEach(userItem =>{              
               //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
               //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
@@ -64,7 +66,7 @@
         </div>
         
         <div class="col-sm-6 text-center align-middle">
-          <p><h5>This is my professional portfolio T01</h5>
+          <p><h5>This is my professional portfolio T02</h5>
           <!-- <strong><h4>Hector Schauvinhold</h4></strong> -->
           </p>
         </div>        
