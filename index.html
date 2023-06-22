@@ -30,12 +30,12 @@
       //Esperar hasta que todo el contenido de la pagina este cargado y agregamos un EventListener
       document.addEventListener('DOMContentLoaded', function(){
           //Se ejecuta una consulta en todos los buttons y para cada uno de ellos...
-          const highlightedItems = document.querySelectorAll('div.highlighted')
-          highlightedItems.forEach(highlighted =>{              
+          const highlightedItems = document.querySelectorAll('div.highlighted');
+          highlightedItems.forEach(userItem =>{              
               //cuando un button sea presionado, ejecutar la funcion showPage con la parte (page) del button.dataset
               //y para obtener el dataset del button que ha sido presionado utilizamos el argumento: this
-              console.log('div.highlighted:',highlighted)
-              highlightedItems.onclick=function(){
+              console.log('div.highlighted:',userItem)
+              userItem.onclick=function(){
                   showPage(this.dataset.page);
               }    
           })
@@ -64,7 +64,7 @@
         </div>
         
         <div class="col-sm-6 text-center align-middle">
-          <p><h5>This is my professional portfolio</h5>
+          <p><h5>This is my professional portfolio T01</h5>
           <!-- <strong><h4>Hector Schauvinhold</h4></strong> -->
           </p>
         </div>        
